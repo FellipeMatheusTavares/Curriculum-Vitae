@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fellipe Matheus — Data Analyst</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0D1117;
+      --surface: #161B22;
+      --surface-2: #1C2333;
+      --border: #21262D;
+      --accent: #58A6FF;
+      --accent-dim: #1F3A5F;
+      --accent-green: #3FB950;
+      --text-primary: #E6EDF3;
+      --text-secondary: #8B949E;
+      --text-muted: #484F58;
+      --tag-bg: #1F3A5F;
+      --tag-border: #2D5A8E;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Space Grotesk', sans-serif;
+      background: var(--bg);
+      color: var(--text-primary);
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+
+    /* ── LAYOUT ── */
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ── HEADER ── */
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 60px 0 48px;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: flex-start;
+      gap: 32px;
+    }
+
+    .avatar-wrap {
+      flex-shrink: 0;
+    }
+
+    .avatar-ring {
+      width: 88px;
+      height: 88px;
+      border-radius: 50%;
+      border: 2px solid var(--accent);
+      padding: 3px;
+      background: var(--surface);
+    }
+
+    .avatar-ring svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    .header-text { flex: 1; }
+
+    .eyebrow {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+
+    h1 {
+      font-size: clamp(28px, 5vw, 42px);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      color: var(--text-primary);
+      margin-bottom: 10px;
+    }
+
+    .tagline {
+      font-size: 15px;
+      color: var(--text-secondary);
+      margin-bottom: 20px;
+      max-width: 520px;
+    }
+
+    .contacts {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .contact-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 12px;
+      color: var(--text-secondary);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 5px 10px;
+      text-decoration: none;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .contact-pill:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .contact-pill svg { flex-shrink: 0; }
+
+    /* ── MAIN GRID ── */
+    main {
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 0;
+      align-items: start;
+    }
+
+    /* ── LEFT COLUMN ── */
+    .col-left {
+      padding: 48px 40px 60px 0;
+      border-right: 1px solid var(--border);
+    }
+
+    /* ── RIGHT COLUMN ── */
+    .col-right {
+      padding: 48px 0 60px 32px;
+    }
+
+    /* ── SECTION ── */
+    section { margin-bottom: 48px; }
+    section:last-child { margin-bottom: 0; }
+
+    .section-label {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section-label::after {
+      content: '';
+      display: block;
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    /* ── ABOUT ── */
+    .about-text {
+      font-size: 14.5px;
+      color: var(--text-secondary);
+      line-height: 1.75;
+    }
+
+    /* ── EXPERIENCE ── */
+    .exp-item {
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: 32px;
+    }
+
+    .exp-item::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 8px;
+      bottom: -24px;
+      width: 1px;
+      background: var(--border);
+    }
+
+    .exp-item:last-child::before { display: none; }
+
+    .exp-dot {
+      position: absolute;
+      left: -4px;
+      top: 7px;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--accent);
+      border: 2px solid var(--bg);
+    }
+
+    .exp-dot.current {
+      background: var(--accent-green);
+      box-shadow: 0 0 0 3px rgba(63, 185, 80, 0.15);
+    }
+
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 4px;
+      margin-bottom: 2px;
+    }
+
+    .exp-org {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .exp-period {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    .exp-role {
+      font-size: 12px;
+      color: var(--accent);
+      margin-bottom: 10px;
+      font-weight: 500;
+    }
+
+    .exp-bullets {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .exp-bullets li {
+      font-size: 13px;
+      color: var(--text-secondary);
+      padding-left: 14px;
+      position: relative;
+      line-height: 1.55;
+    }
+
+    .exp-bullets li::before {
+      content: '›';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    /* ── SKILLS ── */
+    .skill-group { margin-bottom: 16px; }
+
+    .skill-group-name {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .tag {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 11px;
+      background: var(--tag-bg);
+      border: 1px solid var(--tag-border);
+      color: var(--accent);
+      border-radius: 4px;
+      padding: 3px 8px;
+    }
+
+    /* ── EDUCATION ── */
+    .edu-item { margin-bottom: 20px; }
+    .edu-item:last-child { margin-bottom: 0; }
+
+    .edu-degree {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 2px;
+    }
+
+    .edu-inst {
+      font-size: 12px;
+      color: var(--text-secondary);
+    }
+
+    .edu-period {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+
+    .edu-notes {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .edu-notes li {
+      font-size: 12px;
+      color: var(--text-secondary);
+      padding-left: 12px;
+      position: relative;
+    }
+
+    .edu-notes li::before {
+      content: '›';
+      position: absolute;
+      left: 0;
+      color: var(--accent-green);
+      font-weight: 700;
+    }
+
+    .badge-current {
+      display: inline-block;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 10px;
+      background: rgba(63, 185, 80, 0.12);
+      border: 1px solid rgba(63, 185, 80, 0.3);
+      color: var(--accent-green);
+      border-radius: 4px;
+      padding: 2px 7px;
+      margin-left: 6px;
+      vertical-align: middle;
+    }
+
+    /* ── DIVIDER ── */
+    hr.soft {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 20px 0;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    .footer-text {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 680px) {
+      .header-inner { flex-direction: column; gap: 20px; }
+
+      main {
+        grid-template-columns: 1fr;
+      }
+
+      .col-left {
+        padding: 40px 0 0;
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+        padding-bottom: 40px;
+      }
+
+      .col-right { padding: 40px 0 60px; }
+    }
+
+    @media print {
+      body { background: white; color: black; }
+      .contact-pill { border: 1px solid #ccc; color: #333; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <div class="header-inner">
+        <div class="avatar-wrap">
+          <div class="avatar-ring">
+            <!-- Placeholder avatar icon -->
+            <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="40" cy="40" r="40" fill="#1C2333"/>
+              <circle cx="40" cy="32" r="13" fill="#58A6FF" opacity="0.25"/>
+              <ellipse cx="40" cy="65" rx="20" ry="14" fill="#58A6FF" opacity="0.2"/>
+              <circle cx="40" cy="32" r="10" fill="#58A6FF" opacity="0.5"/>
+              <ellipse cx="40" cy="63" rx="16" ry="10" fill="#58A6FF" opacity="0.4"/>
+            </svg>
+          </div>
+        </div>
+
+        <div class="header-text">
+          <p class="eyebrow">Currículo · Data Analyst</p>
+          <h1>Fellipe Matheus<br>Tavares Silva</h1>
+          <p class="tagline">
+            Especialista em análise, visualização e automação de dados com foco em órgãos públicos.
+            Power BI · Python · SQL · Power Platform.
+          </p>
+          <div class="contacts">
+            <a class="contact-pill" href="mailto:fellipe.matheus17@gmail.com">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 7L2 7"/></svg>
+              fellipe.matheus17@gmail.com
+            </a>
+            <a class="contact-pill" href="https://www.linkedin.com/in/fellipetavares17/" target="_blank" rel="noopener">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              LinkedIn
+            </a>
+            <span class="contact-pill">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              (61) 99937-8846
+            </span>
+            <span class="contact-pill">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Brasília — DF
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <main>
+
+      <!-- ── LEFT: About + Experience ── -->
+      <div class="col-left">
+
+        <section>
+          <p class="section-label">Sobre</p>
+          <p class="about-text">
+            Data Analyst com formação em Ciência da Computação e atuação em órgãos públicos federais.
+            Foco em otimização de fluxos, construção de indicadores e suporte à tomada de decisão.
+            Pós-graduando em Ciência de Dados e Inteligência Artificial.
+          </p>
+        </section>
+
+        <section>
+          <p class="section-label">Experiência</p>
+
+          <div class="exp-item">
+            <div class="exp-dot current"></div>
+            <div class="exp-header">
+              <span class="exp-org">Ministério dos Transportes — SENATRAN</span>
+              <span class="exp-period">Set 2024 — Atual</span>
+            </div>
+            <p class="exp-role">Assistente Administrativo</p>
+            <ul class="exp-bullets">
+              <li>Automatização de processos internos com Power Automate e Power Apps.</li>
+              <li>Extração, análise e validação de dados pelo sistema HOD (SERPRO).</li>
+              <li>Desenvolvimento de dashboards em Power BI para acompanhamento de KPIs operacionais.</li>
+              <li>Criação de formulários e fluxos integrados ao SharePoint.</li>
+              <li>Gestão e análise de dados de processos internos.</li>
+            </ul>
+          </div>
+
+          <div class="exp-item">
+            <div class="exp-dot"></div>
+            <div class="exp-header">
+              <span class="exp-org">Agência Nacional de Aviação Civil — ANAC</span>
+              <span class="exp-period">Mar 2022 — Mar 2024</span>
+            </div>
+            <p class="exp-role">Estagiário de Dados</p>
+            <ul class="exp-bullets">
+              <li>Desenvolvimento de aplicações em Oracle Apex.</li>
+              <li>Consultas e filtros em MySQL para apoio analítico.</li>
+              <li>Criação e manutenção de dashboards em Power BI para indicadores estratégicos.</li>
+              <li>Elaboração de relatórios analíticos e apresentações executivas.</li>
+              <li>Planilhas automatizadas em Excel para controle operacional.</li>
+            </ul>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- ── RIGHT: Skills + Education ── -->
+      <div class="col-right">
+
+        <section>
+          <p class="section-label">Habilidades</p>
+
+          <div class="skill-group">
+            <p class="skill-group-name">Linguagens</p>
+            <div class="tags">
+              <span class="tag">Python</span>
+              <span class="tag">R</span>
+              <span class="tag">SQL</span>
+              <span class="tag">Oracle</span>
+              <span class="tag">MongoDB</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <p class="skill-group-name">Visualização & BI</p>
+            <div class="tags">
+              <span class="tag">Power BI</span>
+              <span class="tag">Dashboards</span>
+              <span class="tag">ETL</span>
+              <span class="tag">KPIs</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <p class="skill-group-name">Plataformas</p>
+            <div class="tags">
+              <span class="tag">Power Apps</span>
+              <span class="tag">Power Automate</span>
+              <span class="tag">SharePoint</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <p class="skill-group-name">Metodologia</p>
+            <div class="tags">
+              <span class="tag">Estatística</span>
+              <span class="tag">EDA</span>
+              <span class="tag">Scrum</span>
+            </div>
+          </div>
+        </section>
+
+        <hr class="soft" />
+
+        <section>
+          <p class="section-label">Formação</p>
+
+          <div class="edu-item">
+            <p class="edu-degree">
+              Pós-Graduação em Ciência de Dados e IA
+              <span class="badge-current">Em andamento</span>
+            </p>
+            <p class="edu-inst">Uninter</p>
+            <p class="edu-period">2025 –</p>
+          </div>
+
+          <div class="edu-item">
+            <p class="edu-degree">Bacharelado em Ciência da Computação</p>
+            <p class="edu-inst">Universidade Católica de Brasília</p>
+            <p class="edu-period">Jan 2020 — Jul 2024</p>
+            <ul class="edu-notes">
+              <li>Monitor e palestrante de Power BI em oficinas acadêmicas.</li>
+              <li>Iniciação científica em Bioinformática.</li>
+            </ul>
+          </div>
+        </section>
+
+      </div>
+
+    </main>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p class="footer-text">fellipe.matheus17@gmail.com · Brasília, DF · 2025</p>
+    </div>
+  </footer>
+
+</body>
+</html>
