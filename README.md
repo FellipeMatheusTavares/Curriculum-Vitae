@@ -8,9 +8,8 @@ O objetivo é apresentar minha trajetória profissional, formação acadêmica, 
 
 ## Tecnologias usadas
 
-- HTML5 & CSS3 puro (sem frameworks)
+- HTML5 & CSS
 - Google Fonts (Inter + JetBrains Mono)
-- Animações com Intersection Observer API
 - Hospedagem via GitHub Pages
 - Claude.ai para Desing
 
