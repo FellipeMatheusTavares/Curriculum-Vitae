@@ -28,7 +28,7 @@ const dados = {
         descricao: "Data Analyst com formação em Ciência da Computação e experiência em análise, visualização e automação de dados. Atuação em órgãos públicos com foco em otimização de fluxos, Python, SQL e Power Platform, atuando em análise, visualização e automação de dados.",
 
     },
-
+//--------------------------------------------------------------------
     experiencias: [
 
         {
@@ -46,43 +46,67 @@ const dados = {
         }
 
     ],
-
-
+//--------------------------------------------------------------------
     formacao: [
         {
-            instituição: "Universidade Catolica de Brasilia - UCB",
-            Curso: "Ciencia da Computação",
+            instituicao: "Universidade Católica de Brasília - UCB",
+            curso: "Ciência da Computação",
             nivel: "Graduação",
             periodo: "2020 - 2024"
         },
         {
-            instituição: "Centro Universitário Internacional - UNINTER",
-            Curso: "Ciência de Dados e Inteligência Artificial",
+            instituicao: "Centro Universitário Internacional - UNINTER",
+            curso: "Ciência de Dados e Inteligência Artificial",
             nivel: "Pós-Graduação",
             periodo: "2026"
         },{
-            instituição: "Centro Universitário Internacional - UNINTER",
-            Curso: "Engenharia da Computação",
+            instituicao: "Centro Universitário Internacional - UNINTER",
+            curso: "Engenharia da Computação",
             nivel: "Pós-Graduação",
-            periodo: "2026"
+            periodo: "2026",
+            status:"Em andamento"
         }
             
 
     ],
-
-
+//--------------------------------------------------------------------
     habilidades: [
 
     ],
-
-
+//--------------------------------------------------------------------
     projetos: [
 
+    //---------Ver se coloco o projeto do jogos e do formulario SENATRAN-----------------
+    //----------------------formulario SENATRAN-----------------------------
+    {
+    nome:"Formulário SENATRAN",
+
+    descricao:"Sistema para geração de formulários.",
+
+    tecnologias:[
+        "HTML",
+        "CSS",
+        "JavaScript"
     ],
 
-    //---------Ver se coloco o projeto do jogos e do formulario SENATRAN-----------------
+    github:"",
 
+    demo:""
+}
+    ],
+//--------------------------------------------------------------------
     certificados: [
+        {
+    nome:"Power BI",
+
+    instituicao:"Fundação Bradesco",
+
+    cargaHoraria:"40 horas",
+
+    ano:"2025",
+
+    arquivo:"assets/certificados/powerbi.pdf"
+    }
 
     ],
 
@@ -94,7 +118,7 @@ const dados = {
     contato: {
 
         email: "dev.fellipetavares@gmail.com",
-        telefone: "61999378846",
+        telefone: "(61) 99937-8846",
         github: "https://github.com/FellipeMatheusTavares",
         linkedin: "https://www.linkedin.com/in/fellipetavares17/"
 

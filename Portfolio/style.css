@@ -240,9 +240,9 @@ nav a:hover::after{
 
 .hero-photo img{
 
-    width:180px;
+    width:120px;
 
-    height:180px;
+    height:120px;
 
     object-fit:cover;
 
