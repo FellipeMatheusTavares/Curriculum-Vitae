@@ -1,6 +1,4 @@
 /*
-ESTRUTURA DO ARQUIVO
-
 1. Perfil
 2. Sobre
 3. Experiências
@@ -75,7 +73,7 @@ const dados = {
             empresa: "Agência Nacional de Aviação Civil - ANAC",
             cargo: "Estagiário",
             local: "Brasília - DF",
-            periodo: "2022 - 2024",
+            periodo: "2022 - 2023",
             descricao: "Descrição das atividades desenvolvidas."
         }
 
@@ -214,26 +212,12 @@ const dados = {
     // CERTIFICADOS
     // =====================================================
     certificados: [
-
-        /*
-        Modelo
-
         {
-            nome:"",
-            instituicao:"",
-            cargaHoraria:"",
-            ano:"",
-            arquivo:"",
-            imagem:""
-        }
-        */
+            nome: "Formação Ciêntista de Dados",
 
-        {
-            nome: "teste 1",
+            instituicao: "Udemy",
 
-            instituicao: "Fundação Bradesco",
-
-            cargaHoraria: "40 horas",
+            cargaHoraria: "52 horas",
 
             ano: "2025",
 
@@ -241,7 +225,117 @@ const dados = {
 
             imagem: "assets/certificados/powerbi.jpg"
 
-        }
+        },
+            {
+            nome: "Oracle APEX, Padrões e Componentes da ANAC para a Plataforma",
+
+            instituicao: "ANAC",
+
+            cargaHoraria: "40 horas",
+
+            ano: "2022",
+
+            arquivo: "assets/certificados/teste1.pdf",
+
+            imagem: "assets/certificados/powerbi.jpg"
+
+        },
+           {
+            nome: "Introdução à Análise de Dados - Microsoft Power BI",
+
+            instituicao: "Fundação Bradesco",
+
+            cargaHoraria: "5 horas",
+
+            ano: "2023",
+
+            arquivo: "assets/certificados/teste1.pdf",
+
+            imagem: "assets/certificados/powerbi.jpg"
+
+        },
+            {
+            nome: "Microsoft Excel 2016",
+
+            instituicao: "Fundação Bradesco",
+
+            cargaHoraria: "15 horas",
+
+            ano: "2023",
+
+            arquivo: "assets/certificados/teste1.pdf",
+
+            imagem: "assets/certificados/powerbi.jpg"
+
+        },
+            {
+            nome: "Google Analytics para iniciantes",
+
+            instituicao: "Google",
+
+            ano: "2026",
+
+            arquivo: "assets/certificados/teste1.pdf",
+
+            imagem: "assets/certificados/powerbi.jpg"
+
+        },  
+            {
+            nome: "C e C++ - Iniciante Ao Avançado",
+
+            instituicao: "Udemy",
+
+            cargaHoraria: "20 horas",
+
+            ano: "2023",
+
+            arquivo: "assets/certificados/teste1.pdf",
+
+            imagem: "assets/certificados/powerbi.jpg"
+
+        },
+          {
+            nome: "Conferência Latino-Americana de LibreOffice Brasil 2022",
+
+            instituicao: "Universidade Católica de Brasília",
+
+            cargaHoraria: "2 horas",
+
+            ano: "2022",
+
+            arquivo: "assets/certificados/teste1.pdf",
+
+            imagem: "assets/certificados/powerbi.jpg"
+
+        },
+            {
+            nome: "Aula Magna - Cursos de TI, Negócios, Comunicação e Engenharias",
+
+            instituicao: "Universidade Católica de Brasília",
+
+            cargaHoraria: "4 horas",
+
+            ano: "2022",
+
+            arquivo: "assets/certificados/teste1.pdf",
+
+            imagem: "assets/certificados/powerbi.jpg"
+
+        },
+          {
+            nome: "da Palestra intitulada: Desmistificando o uso do ChatGPT: diferentes perspectivas e abordagens, oferecida pelo Núcleo de Inovação e Tecnologia Educacional – NITE,",
+
+            instituicao: "Universidade Católica de Brasília",
+
+            cargaHoraria: "3 horas",
+
+            ano: "2023",
+
+            arquivo: "assets/certificados/teste1.pdf",
+
+            imagem: "assets/certificados/powerbi.jpg"
+
+        },
 
     ],
 
@@ -289,8 +383,3 @@ const dados = {
     }
 
 };
-
-// =========================================================
-// FIM DO ARQUIVO
-// =========================================================
-
