@@ -1,29 +1,3 @@
-/*
-=========================================================
-SCRIPT DO PORTFÓLIO
-=========================================================
-
-Este arquivo é responsável por carregar automaticamente
-todas as informações do arquivo dados.js.
-
-Sempre que precisar atualizar seu currículo,
-edite apenas o arquivo:
-
-dados.js
-
-=========================================================
-*/
-
-
-// =========================================================
-// FUNÇÕES AUXILIARES
-// =========================================================
-
-/**
- * Retorna um elemento pelo ID.
- * Exemplo:
- * $("nome")
- */
 function $(id) {
 
     return document.getElementById(id);
@@ -469,5 +443,3 @@ document.addEventListener(
     "DOMContentLoaded",
     iniciarPortfolio
 );
-
-
