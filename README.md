@@ -1,4 +1,4 @@
-# Currículo Online — Fellipe Matheus Tavares Silva
+# fellipematheustavares.github.io
 
 ## Sobre
 
@@ -11,7 +11,7 @@ O objetivo é apresentar minha trajetória profissional, formação acadêmica, 
 - HTML5 & CSS
 - Google Fonts (Inter + JetBrains Mono)
 - Hospedagem via GitHub Pages
-- Claude.ai para Desing
+- IA - Chat GPT
 
 ## Contato
 LinkedIn: www.linkedin.com/in/fellipetavares17
