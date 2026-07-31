@@ -12,41 +12,24 @@
 
 const dados = {
 
-    // =====================================================
-    // PERFIL
-    // =====================================================
     perfil: {
 
-        // Nome completo
+  
         nome: "Fellipe Matheus Tavares Silva",
-
-        // Cargo atual
         cargo: "Analista de Dados",
-
-        // Foto de perfil
         foto: "assets/img/perfil.jpg",
-
-        // Currículo em PDF
         curriculo: "assets/curriculo.pdf"
 
     },
 
-    // =====================================================
-    // SOBRE
-    // =====================================================
     sobre: {
 
-        // Pequeno texto exibido no topo da página
         resumo: "Analista de Dados com formação em Ciência da Computação e experiência em análise, visualização e automação de dados.",
-
-        // Texto completo da seção Sobre
-        descricao: "Profissional com experiência em órgãos públicos, atuando na análise, visualização e automação de dados utilizando Python, SQL, Power BI e Power Platform. Busco desenvolver soluções que otimizem processos e apoiem a tomada de decisão por meio de dados."
+        descricao: "Analista de Dados com formação em Ciência da Computação e experiência na extração,tratamento, análise e automação de dados em órgãos públicos. Atuação na otimização de processos, desenvolvimento de soluções com SQL, Python e Power Platform, integração de sistemas e suporte à tomada de decisão por meio da análise de dados. Experiência em ETL, análise exploratória e melhoria contínua de processos."
 
     },
 
-    // =====================================================
-    // EXPERIÊNCIAS PROFISSIONAIS
-    // =====================================================
+
     experiencias: [
 
         /*
