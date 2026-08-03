@@ -29,21 +29,7 @@ const dados = {
 
     },
 
-
     experiencias: [
-
-        /*
-        Modelo para adicionar uma nova experiência
-
-        {
-            empresa: "",
-            cargo: "",
-            local: "",
-            periodo: "",
-            descricao: ""
-        }
-        */
-
         {
             empresa: "Secretaria Nacional de Trânsito - SENATRAN",
             cargo: "Assistente Administrativo",
@@ -62,23 +48,8 @@ const dados = {
 
     ],
 
-    // =====================================================
-    // FORMAÇÃO ACADÊMICA
-    // =====================================================
+    // FORMAÇÃO
     formacao: [
-
-        /*
-        Modelo
-
-        {
-            instituicao:"",
-            curso:"",
-            nivel:"",
-            status:"",
-            periodo:""
-        }
-        */
-
         {
             instituicao: "Universidade Católica de Brasília - UCB",
             curso: "Ciência da Computação",
@@ -91,7 +62,6 @@ const dados = {
             instituicao: "Centro Universitário Internacional - UNINTER",
             curso: "Ciência de Dados e Inteligência Artificial",
             nivel: "Pós-Graduação",
-            status: "Em andamento",
             periodo: "2026"
         },
 
@@ -105,14 +75,8 @@ const dados = {
 
     ],
 
-    // =====================================================
     // HABILIDADES
-    // =====================================================
     habilidades: {
-
-        /*
-        Basta adicionar ou remover itens dos arrays.
-        */
 
         linguagens: [
             "HTML",
@@ -137,23 +101,8 @@ const dados = {
 
     },
 
-    // =====================================================
     // PROJETOS
-    // =====================================================
     projetos: [
-
-        /*
-        Modelo para adicionar um novo projeto
-
-        {
-            nome: "",
-            descricao: "",
-            tecnologias: [],
-            github: "",
-            demo: "",
-            imagem: ""
-        }
-        */
 
         {
             nome: "Formulário SENATRAN",
@@ -173,27 +122,9 @@ const dados = {
             imagem: "assets/projetos/senatran.png"
 
         }
-
-        // Exemplo:
-        //
-        // {
-        //     nome: "Board Games Manager",
-        //     descricao: "Aplicação para gerenciamento de jogos de tabuleiro.",
-        //     tecnologias: [
-        //         "HTML",
-        //         "CSS",
-        //         "JavaScript"
-        //     ],
-        //     github: "",
-        //     demo: "",
-        //     imagem: "assets/projetos/boardgames.png"
-        // }
-
     ],
 
-    // =====================================================
     // CERTIFICADOS
-    // =====================================================
     certificados: [
         {
             nome: "Formação Ciêntista de Dados",
@@ -322,19 +253,8 @@ const dados = {
 
     ],
 
-    // =====================================================
     // IDIOMAS
-    // =====================================================
     idiomas: [
-
-        /*
-        Modelo
-
-        {
-            idioma:"",
-            nivel:""
-        }
-        */
 
         {
             idioma: "Português",
@@ -348,9 +268,7 @@ const dados = {
 
     ],
 
-    // =====================================================
     // CONTATO
-    // =====================================================
     contato: {
 
         email: "dev.fellipetavares@gmail.com",
