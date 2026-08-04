@@ -18,7 +18,7 @@ const dados = {
         nome: "Fellipe Matheus Tavares Silva",
         cargo: "Analista de Dados",
         foto: "assets/img/perfil.jpg",
-        curriculo: "assets/Fellipe Matheus Tavares Silva.pdf"
+        curriculo: "assets//curriculo/Fellipe Matheus Tavares Silva.pdf"
 
     },
 
@@ -135,9 +135,8 @@ const dados = {
 
             ano: "2025",
 
-            arquivo: "assets/certificados/teste1.pdf",
+            arquivo: "assets/certificados/UC-90ac2bac-659d-432d-936a-db62d0d1f5fa.pdf",
 
-            imagem: "assets/certificados/powerbi.jpg"
 
         },
             {
@@ -149,7 +148,7 @@ const dados = {
 
             ano: "2022",
 
-            arquivo: "assets/certificados/teste1.pdf",
+            arquivo: "assets/certificados/Oracle Apex Anac.pdf",
 
             imagem: "assets/certificados/powerbi.jpg"
 
@@ -163,7 +162,7 @@ const dados = {
 
             ano: "2023",
 
-            arquivo: "assets/certificados/teste1.pdf",
+            arquivo: "assets/certificados/Fundação Bradesco introdução a analise de dados - basico.pdf",
 
             imagem: "assets/certificados/powerbi.jpg"
 
@@ -177,7 +176,7 @@ const dados = {
 
             ano: "2023",
 
-            arquivo: "assets/certificados/teste1.pdf",
+            arquivo: "assets/certificados/Escola Virtual - Fundação Bradesco.pdf",
 
             imagem: "assets/certificados/powerbi.jpg"
 
@@ -189,7 +188,7 @@ const dados = {
 
             ano: "2026",
 
-            arquivo: "assets/certificados/teste1.pdf",
+            arquivo: "assets/certificados/Course_Certificate.pdf",
 
             imagem: "assets/certificados/powerbi.jpg"
 
@@ -203,7 +202,7 @@ const dados = {
 
             ano: "2023",
 
-            arquivo: "assets/certificados/teste1.pdf",
+            arquivo: "assets/certificados/UC-d15fd802-734b-4940-94d7-1913ea4cbd75.pdf",
 
             imagem: "assets/certificados/powerbi.jpg"
 
@@ -217,7 +216,7 @@ const dados = {
 
             ano: "2022",
 
-            arquivo: "assets/certificados/teste1.pdf",
+            arquivo: "assets/certificados/certificado-participacao-r3w1y.pdf",
 
             imagem: "assets/certificados/powerbi.jpg"
 
@@ -231,7 +230,7 @@ const dados = {
 
             ano: "2022",
 
-            arquivo: "assets/certificados/teste1.pdf",
+            arquivo: "assets/certificados/certificado-participacao-eYqA2.pdf",
 
             imagem: "assets/certificados/powerbi.jpg"
 
@@ -245,7 +244,7 @@ const dados = {
 
             ano: "2023",
 
-            arquivo: "assets/certificados/teste1.pdf",
+            arquivo: "assets/certificados/Desmistificando o uso do Chat.pdf",
 
             imagem: "assets/certificados/powerbi.jpg"
 
