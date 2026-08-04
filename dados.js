@@ -51,50 +51,62 @@ const dados = {
     // FORMAÇÃO
     formacao: [
         {
-            instituicao: "Universidade Católica de Brasília - UCB",
-            curso: "Ciência da Computação",
-            nivel: "Graduação",
-            status: "Concluído",
-            periodo: "2020 - 2024"
+            instituicao: "Centro Universitário Internacional - UNINTER",
+            curso: "Engenharia da Computação",
+            nivel: "Pós-Graduação",
+            status: "Em andamento",
+            periodo: "2026"
         },
 
         {
             instituicao: "Centro Universitário Internacional - UNINTER",
             curso: "Ciência de Dados e Inteligência Artificial",
             nivel: "Pós-Graduação",
+            status: "Concluído",
             periodo: "2026"
         },
 
         {
-            instituicao: "Centro Universitário Internacional - UNINTER",
-            curso: "Engenharia da Computação",
-            nivel: "Pós-Graduação",
-            status: "Em andamento",
-            periodo: "2026"
+            instituicao: "Universidade Católica de Brasília - UCB",
+            curso: "Ciência da Computação",
+            nivel: "Graduação",
+            status: "Concluído",
+            periodo: "2020 - 2024"
         }
-
     ],
 
     // HABILIDADES
     habilidades: {
 
         linguagens: [
+            "Python",
+            "JavaScript",
             "HTML",
             "CSS",
-            "JavaScript",
-            "Python"
+            "R",
+            "C"
         ],
 
         bancoDeDados: [
             "SQL",
-            "MySQL"
+            "MySQL",
+            "NoSQL",
+            "MongoDB"
         ],
+
+        dadosEIA: [
+            "Pandas",
+            "NumPy",
+            "Machine Learning"
+         ],
 
         ferramentas: [
             "Git",
             "GitHub",
             "VS Code",
+            "PyCharm",
             "Power BI",
+            "Tableau",
             "Excel",
             "Pacote Office"
         ]
