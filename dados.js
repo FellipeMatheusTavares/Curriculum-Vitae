@@ -18,7 +18,7 @@ const dados = {
         nome: "Fellipe Matheus Tavares Silva",
         cargo: "Analista de Dados",
         foto: "assets/img/perfil.jpg",
-        curriculo: "assets//curriculo/Fellipe Matheus Tavares Silva.pdf"
+        curriculo: "assets/curriculo/Fellipe Matheus Tavares Silva.pdf"
 
     },
 
